@@ -11,9 +11,17 @@ Simulated camera and sensor stack that tracks basketball player and ball movemen
 
 ## Running the demo
 ```bash
+# run from the repository root
 python -m sbvs.app
 ```
 The script simulates a short game segment, prints player dashboards with predictions, and displays the scoreboard state.
+
+If your environment reports `ModuleNotFoundError: No module named 'sbvs'`, run the bundled helper instead (it sets up the
+right module path automatically):
+
+```bash
+python run_demo.py
+```
 
 ## Running in GitHub Codespaces
 1. Create or open a Codespace for this repository (it ships with Python preinstalled).

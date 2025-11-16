@@ -35,9 +35,10 @@ class TrackingEngine:
             self.stat_book.record_stat(player, "shots", 1)
 
     def summary(self) -> str:
-        lines = ["Movement frames: %s" % len(self.movement_log)]
-        lines.append("Last ball position: %s" % (self.ball_path[-1] if self.ball_path else "N/A"))
-        lines.append("Scoreboard: %s" % self.scoreboard.render())
+        lines = [f"Movement frames: {len(self.movement_log)}"]
+        last_ball_position = self.ball_path[-1] if self.ball_path else "N/A"
+        lines.append(f"Last ball position: {last_ball_position}")
+        lines.append(f"Scoreboard: {self.scoreboard.render()}")
         return "\n".join(lines)
 
 
